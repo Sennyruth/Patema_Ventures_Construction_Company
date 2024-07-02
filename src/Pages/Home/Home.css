@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hero{
+    background-image: url("../../assets/collection.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+
+}
+.hero-title{
+    color:black;
+    font-size: 50px;
+    font-weight: 700;
+
+}
+.cta{
+    background-color:orange;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 50px;
+
+}
+.cta a{
+    text-decoration: none;
+}
+.cta a:hover{
+    transform: scale(95%);
+    color:white; 
+}
+.about-title{
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+.about-container1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 45%;
+}
