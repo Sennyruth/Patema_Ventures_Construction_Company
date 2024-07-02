@@ -4,7 +4,7 @@ body{
     box-sizing: border-box;
 }
 .header-section{
-    background-color:orangered;
+    background-color:#d1d2d6;
     display: flex;
     justify-content: space-between;
     align-items: center;
