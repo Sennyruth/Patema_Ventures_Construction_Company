@@ -43,14 +43,16 @@ function Projects() {
                             ]
 
 
-    ]
+    
   return (
     <div>
      <h2 className="projmaintitle">View Our Projects</h2> 
      <div className="projects-hero"></div>
+     <h2 className="projtitle">Complete Projects</h2>
      <div className="projects-container">
-        <h2 className="projtitle">Complete Projects</h2>
+        
      </div>
+     
     </div>
   )
 }
