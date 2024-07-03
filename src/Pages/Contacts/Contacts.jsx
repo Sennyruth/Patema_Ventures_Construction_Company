@@ -11,7 +11,7 @@ function Contacts() {
         <p>Have a project in mind? Reach out to us today for expert guidance,<br></br> personalized solutions, and exceptional construction services.</p>
         </div>
       </div>
-      <div className="contact-container">
+      
         <div className="contact-container-text">
           <h2>Get In Touch</h2>
         </div>
@@ -42,18 +42,47 @@ function Contacts() {
         </div>
         <div className="map">
           <h2 className="maptitle">Find Us on Google Maps</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.3586905214!2d36.682579697185325!3d-1.3028602801147329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi!5e0!3m2!1sen!2ske!4v1719995632940!5m2!1sen!2ske" width="600" height="450"></iframe>
-       <div className="newsletter-form">
-        <h2 className="newsletter-title">Subscribe to our Newsletter</h2>
-        <form className="newsletter-form-container">
-          <label htmlFor="fname">FirstName</label>
-        </form>
+          </div>
+          <div className="location-form">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.3586905214!2d36.682579697185325!3d-1.3028602801147329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi!5e0!3m2!1sen!2ske!4v1719995632940!5m2!1sen!2ske" width="600" height="450"></iframe>
+        
+        
+        
+        
+ <div className="form-containers">
+ <h2 className="newsletter-title">Book a Service</h2>
+ <form className="newsletter-form-container">
+           <label htmlFor="fname">FirstName</label><br />
+           <input type="text" id="fname" name="firstname" placeholder="Your firstname"/><br />
+           <label htmlFor="lname">LastName</label><br />
+           <input type="text" id="lname" name="lastname" placeholder="Your lastname"/><br />
+           <label htmlFor="email">Email</label><br />
+           <input type="text" id="email" name="email" placeholder="Your email address"/><br />
+           
+           <label htmlFor="lname">Service</label><br />
+           <select name="" id="" className="select">
+             <option value="monthly">Architectural design</option>
+             <option value="weekly">Rennovations</option>
+             <option value="weekly">Interior design</option>
+             <option value="weekly">Building Construction</option>
+             <option value="weekly">Road construction</option>
+           </select><br />
+           <button type="submit"className="form-btn">Submit</button>
+           </form>
+ </div>
+ 
+         
+           
+       
+       
+        
+         </div>
+         
        </div>
        
-        </div>
-        
-      </div>
-    </div>
+          
+       
+    
   )
 }
 
