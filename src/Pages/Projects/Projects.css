@@ -1,0 +1,14 @@
+.projects-hero{
+    background-image: url("../../assets/apartments.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+.projmaintitle{
+    text-align: center;
+}
+.projtitle{
+    font-size: 3rem;
+    text-align: center;
+}

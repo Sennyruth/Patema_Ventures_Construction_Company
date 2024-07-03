@@ -1,9 +1,9 @@
 .service-hero-text{
-    background-image: url("../../assets/excavator.jpeg");
+    background-image: url("../../assets/serbaner.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 60vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;

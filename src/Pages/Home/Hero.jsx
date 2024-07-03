@@ -5,9 +5,8 @@ function Hero() {
     <div>
       <section className="hero">
         <div className="hero-container">
-            <h1 className="hero-title">Building Dreams,One Brick at a Time!</h1>
-            <p className="hero-description">We are a team of creative and innovative people who are passionate
-                about what we do. </p>
+            <h1 className="hero-title">Beautiful Heights</h1>
+            <p className="hero-description">Building Dreams,One Brick at a Time! </p>
                 <a href="#" className="cta">Get Started</a>
         </div>
       </section>

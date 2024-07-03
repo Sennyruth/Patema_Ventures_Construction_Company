@@ -17,7 +17,7 @@ function Header() {
                 <li className="navigationlist-items"><Link to="/projects">Projects</Link></li>
                 <li className="navigationlist-items"><Link to="/contacts">Contacts</Link></li>
                 <li className="navigationlist-items"><Link to="/sign up">Sign Up</Link></li>
-                <li className="navigationlist-items"><Link to="/sign in">Sign in</Link></li>
+                <li className="navigationlist-items"><Link to="/sign in">Sign In</Link></li>
 
             </ul>
             </nav>

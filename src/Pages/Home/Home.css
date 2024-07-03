@@ -23,10 +23,14 @@ body{
 
 }
 .hero-title{
-    color:black;
+    float:top;
+    color:rgb(174, 112, 216);
     font-size: 50px;
     font-weight: 700;
 
+}
+.hero-description{
+    font-size: 20px;
 }
 .cta{
     background-color:orange;
@@ -62,7 +66,6 @@ body{
     justify-content: center;
     align-items: flex-start;
     width: 70%;
-   
     margin-left: 30px
     
 }
@@ -94,6 +97,7 @@ p{
     .customer-cards{
         display: flex;
         flex-wrap: wrap;
+        margin:40px;
     }
     .client-container{
         width: 20%;

@@ -1,0 +1,56 @@
+.contact-hero{
+    background-image: url("../../assets/contact.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+}
+.contact-hero-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:rgb(255, 142, 127);
+    font-size: 2rem;
+
+}
+.maintitle{
+    font-size: 3rem;
+    color: orangered;
+
+
+}
+.contact-container-text{
+    text-align: center;
+    font-size: 2rem;
+}
+.contact-container-visit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: solid grey;
+    width: 30%;
+    height: 200px;
+    
+}
+.contact-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+
+}
+.contact-icons{
+    font-size: 40px;
+    color: orangered;
+    text-align: center;
+}
+.cont-text{
+    font-size: 1rem;
+    color: orangered;
+}
+.map{
+    margin-left: 30px;
+
+}
