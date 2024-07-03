@@ -1,5 +1,5 @@
 .service-hero-text{
-    background-image: url("../../assets/serbaner.jpeg");
+    background-image: url("../../assets/banner1.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    object-fit: cover;
 }
 .services{
     text-align: center;
