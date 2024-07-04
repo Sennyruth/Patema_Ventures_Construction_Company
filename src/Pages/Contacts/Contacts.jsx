@@ -2,8 +2,38 @@ import { IoHome } from "react-icons/io5";
 import { IoCall } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { useFormik } from "formik";
+import * as Yup from "yup"
 import "./Contacts.css"
 function Contacts() {
+  const validationschema = Yup.object ({
+    firstname:Yup.string().required("firstname is required")
+    .min(4,"Firstname should not be less than 4 characters")
+    .max(10,"Firstname should not be more than 10 characters")
+    .matches(/^[a-zA-Z]+$/,"Firstname should contain only alphabets"),
+
+    lastname:Yup.string().required("lastname is required")
+    .min(4,"Lastname should not be less than 4 characters")
+    .max(10,"Lastname should not be more than 10 characters")
+    .matches(/^[a-zA-Z]+$/,"Lastname should contain only alphabets"),
+
+    email:Yup.string().required("email is required")
+    .email("Invalid email format"),
+    service:Yup.string().required("service required")
+  })
+  const formik = useFormik({
+    initialValues: {
+      firstname:"",
+      lastname: "",
+      email: "",
+      service:"",
+      },
+      onSubmit: (formState) => {
+        console.log(formState)
+        },
+        validationSchema: validationschema
+  })
+  
+  console.log(formik.values);
   return (
     <div>
       <div className="contact-hero">
@@ -52,22 +82,38 @@ function Contacts() {
         
  <div className="form-containers">
  <h2 className="newsletter-title">Book a Service</h2>
- <form className="newsletter-form-container">
-           <label htmlFor="fname">FirstName</label><br />
-           <input type="text" id="fname" name="firstname" placeholder="Your firstname"/><br />
-           <label htmlFor="lname">LastName</label><br />
-           <input type="text" id="lname" name="lastname" placeholder="Your lastname"/><br />
+ <form onSubmit={formik.handleSubmit}>
+  <div className="firstname">
+  <label htmlFor="fname">FirstName</label><br />
+  <input type="text" id="fname" name="firstname" placeholder="Your firstname"  value ={formik.values.firstname} onChange ={formik.handleChange} onBlur={formik.handleBlur}/><br />
+  {formik.errors.firstname && formik.touched.firstname ? <div className="error">{formik.errors.firstname}</div> : null}
+
+  </div>
+   <div className="lastname">
+   <label htmlFor="lname">LastName</label><br />
+           <input type="text" id="lname"  placeholder="Your lastname" name="lastname" value ={formik.values.lastname}  onChange ={formik.handleChange} onBlur={formik.handleBlur} /><br /> 
+           {formik.errors.lastname && formik.touched.lastname ? <div className="error">{formik.errors.lastname}</div> : null}
+
+    </div>        
+           <div className="email">
            <label htmlFor="email">Email</label><br />
-           <input type="text" id="email" name="email" placeholder="Your email address"/><br />
-           
+           <input type="text" id="email"  placeholder="Your email address" name="email" value ={formik.values.email} onChange ={formik.handleChange} onBlur={formik.handleBlur}/><br />
+           {formik.errors.email && formik.touched.email ? <div className="error">{formik.errors.email}</div> : null}
+
+           </div>
+           <div className="servic">
            <label htmlFor="lname">Service</label><br />
-           <select name="" id="" className="select">
-             <option value="monthly">Architectural design</option>
-             <option value="weekly">Rennovations</option>
-             <option value="weekly">Interior design</option>
-             <option value="weekly">Building Construction</option>
-             <option value="weekly">Road construction</option>
+           <select id="service" className="select" name="service" value ={formik.values.email} onChange ={formik.handleChange} onBlur={formik.handleBlur}>
+            <option value="">select a service</option>
+             <option value="Architectural design">Architectural design</option>
+             <option value="Rennovations">Rennovations</option>
+             <option value="nterior design">Interior design</option>
+             <option value="Building Construction">Building Construction</option>
+             <option value="Road construction">Road construction</option>
            </select><br />
+           {formik.errors.service && formik.touched.service ? <div className="error">{formik.errors.service}</div> : null}
+
+           </div>
            <button type="submit"className="form-btn">Submit</button>
            </form>
  </div>
