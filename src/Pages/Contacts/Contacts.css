@@ -71,6 +71,7 @@ input{
     padding: 10px;
     background-color: orangered;
    color: white;
+   width: 10rem;
 }
 .select{
     padding: 10px;
